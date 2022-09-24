@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css_final.css">
+    
+    <script src="./filter.js"></script>
+    
+    <!-- <link rel="stylesheet" href="./css-1.css"> -->
+    <title>Rollers</title>
+</head>
+
+<body>
+    <div class="heading">
+    <h1>Rollers</h1>
+    <!-- <button id="get-unique-values" onclick="getUniqueValuesFromColumn()">Get unique column values</button> -->
+</div>
+    <div class="outer-wrapper">
+    <div class="table-wrapper">
+    <table id="emp-table">
+        <thead>
+            <th col-index = 1>NSN</th>
+            <th col-index = 2>Powered
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+
+            <th col-index = 3>Length (in)
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 4>Length of Leads
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 5>Torque
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 6>Voltage Rating
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 7>Amp Rating
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 8>Slotted
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 9>Tapered
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 10>Fitting Shape
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 11>Fitting Length
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select> 
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="NSN">3020-05-000-7001</td>
+                <td class="powered">No</td>
+                <td class="length">8</td>
+                <td class="leadLength">N/A</td>
+                <td class="torque">N/A</td>
+                <td class="volts">N/A</td>
+                <td class="amps">N/A</td>
+                <td class="slotted">Yes</td>
+                <td class="taper">No</td>
+                <td class="fittingSh">Hex</td>
+                <td class="fittingLeng">2</td>
+            </tr>
+            <tr>
+                <td class="NSN">3915-13-000-1720</td>
+                <td class="powered">No</td>
+                <td class="length">20</td>
+                <td class="leadLength">N/A</td>
+                <td class="torque">N/A</td>
+                <td class="volts">N/A</td>
+                <td class="amps">N/A</td>
+                <td class="slotted">Yes</td>
+                <td class="taper">No</td>
+                <td class="fittingSh">Hex</td>
+                <td class="fittingLeng">2</td>
+            </tr>
+            <tr>
+                <td class="NSN">3915-04-000-1864</td>
+                <td class="powered">Yes</td>
+                <td class="length">15</td>
+                <td class="leadLength">36</td>
+                <td class="torque">12</td>
+                <td class="volts">50</td>
+                <td class="amps">1.9</td>
+                <td class="slotted">No</td>
+                <td class="taper">No</td>
+                <td class="fittingSh">Hex</td>
+                <td class="fittingLeng">2</td>
+            </tr>
+            <tr>
+                <td class="NSN">3020-05-000-7000</td>
+                <td class="powered">No</td>
+                <td class="length">7</td>
+                <td class="leadLength">N/A</td>
+                <td class="torque">N/A</td>
+                <td class="volts">N/A</td>
+                <td class="amps">N/A</td>
+                <td class="slotted">No</td>
+                <td class="taper">No</td>
+                <td class="fittingSh">Hex</td>
+                <td class="fittingLeng">2</td>
+            </tr>
+            <tr>
+                <td class="NSN">3020-05-000-2960</td>
+                <td class="powered">Yes</td>
+                <td class="length">17</td>
+                <td class="leadLength">36</td>
+                <td class="torque">12</td>
+                <td class="volts">50</td>
+                <td class="amps">1.9</td>
+                <td class="slotted">No</td>
+                <td class="taper">Yes</td>
+                <td class="fittingSh">Hex</td>
+                <td class="fittingLeng">2</td>
+            </tr>
+            <tr>
+                <td class="NSN">3915-18-000-6321</td>
+                <td class="powered">Yes</td>
+                <td class="length">16</td>
+                <td class="leadLength">36</td>
+                <td class="torque">12</td>
+                <td class="volts">100</td>
+                <td class="amps">3</td>
+                <td class="slotted">No</td>
+                <td class="taper">Yes</td>
+                <td class="fittingSh">Hex</td>
+                <td class="fittingLeng">5</td>
+            </tr>
+            <tr>
+                <td class="NSN">3020-05-000-9030</td>
+                <td class="powered">No</td>
+                <td class="length">15</td>
+                <td class="leadLength">N/A</td>
+                <td class="torque">N/A</td>
+                <td class="volts">N/A</td>
+                <td class="amps">N/A</td>
+                <td class="slotted">No</td>
+                <td class="taper">No</td>
+                <td class="fittingSh">Square</td>
+                <td class="fittingLeng">5</td>
+            </tr>
+            <tr>
+                <td class="NSN">3915-13-000-1364</td>
+                <td class="powered">No</td>
+                <td class="length">16</td>
+                <td class="leadLength">N/A</td>
+                <td class="torque">N/A</td>
+                <td class="volts">N/A</td>
+                <td class="amps">N/A</td>
+                <td class="slotted">No</td>
+                <td class="taper">No</td>
+                <td class="fittingSh">Square</td>
+                <td class="fittingLeng">1</td>
+            </tr>
+            <tr>
+                <td class="NSN">3915-09-000-3911</td>
+                <td class="powered">Yes</td>
+                <td class="length">30</td>
+                <td class="leadLength">12</td>
+                <td class="torque">100</td>
+                <td class="volts">100</td>
+                <td class="amps">.5</td>
+                <td class="slotted">No</td>
+                <td class="taper">Yes</td>
+                <td class="fittingSh">Hex</td>
+                <td class="fittingLeng">2</td>
+            </tr>
+            <tr>
+                <td class="NSN">3020-05-000-9038</td>
+                <td class="powered">No</td>
+                <td class="length">7</td>
+                <td class="leadLength">N/A</td>
+                <td class="torque">N/A</td>
+                <td class="volts">N/A</td>
+                <td class="amps">N/A</td>
+                <td class="slotted">No</td>
+                <td class="taper">No</td>
+                <td class="fittingSh">Square</td>
+                <td class="fittingLeng">1</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <script>getUniqueValuesFromColumn()
+    </script> -->
+    <script>
+        window.onload = () => {
+            console.log(document.querySelector("#emp-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+        };
+
+        getUniqueValuesFromColumn()
+        
+    </script>
+</div>
+</div>
+</body>
+
+</html>
